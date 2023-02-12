@@ -16,5 +16,6 @@ $newExtraWhooper = $newWhooper->setDecorator(new Decorator("Extra queso",30));
 //echo $newExtraWhooper->getConcepto().' ----------------- +';
 
 echo ($newExtraWhooper->getConcepto());
-//echo ($newExtraWhooper->getPrecio());
+echo '<br>-------------------------------------------------------<br>';
+echo "TOTAL --------------------".($newExtraWhooper->getPrecio());
 

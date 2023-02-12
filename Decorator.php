@@ -8,7 +8,7 @@
         private IDecorator $item;
         
         public function __construct(string $concepto, float $precio){
-            $this->concepto = $concepto;
+            $this->concepto = $concepto." ----------------- ".$precio;
             $this->precio = $precio;
         }
 
@@ -24,7 +24,8 @@
         public function setDecorator(IDecorator $item){
             $this->item = $item;
             
-            $this->item->concepto .= $this->concepto.' -------------- '.$this->precio.'<br><br>';
+            $this->item->concepto = $this->concepto."<br>".$this->item->concepto;
+            //$this->item->concepto .= $this->concepto.' -------------- ';
             //$this->concepto .= " ".$this->item->getConcepto();
             $this->item->precio += $this->precio;
             //$this->precio += $this->item->getPrecio();
