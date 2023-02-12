@@ -3,22 +3,16 @@
 require_once 'IDecorator.php';
 require_once 'Decorator.php';
 
+//CONCEPTO Y PRECIO DE LA HAMBURGUESA
+$whooper = new Decorator("whooper",150);
 
-$whooper = new Decorator("whooper",150);//150
-//echo $whooper->getConcepto()
-
-$newWhooper = $whooper->setDecorator(new Decorator("Menos lechuga",0));//150
+$newWhooper = $whooper->setDecorator(new Decorator("Menos lechuga",0));
 echo '<br>';
-//echo $newWhooper->getConcepto().' ----------------- -';
 
 $newExtraWhooper = $newWhooper->setDecorator(new Decorator("Extra queso",30));
-
-//echo $newExtraWhooper->getConcepto().' ----------------- +';
-
-
-
 ?>
 
+<!--PLANTILLA PARA LA FACTURA HTML-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

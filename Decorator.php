@@ -25,10 +25,8 @@
             $this->item = $item;
             
             $this->item->concepto = $this->concepto."<br>".$this->item->concepto;
-            //$this->item->concepto .= $this->concepto.' -------------- ';
-            //$this->concepto .= " ".$this->item->getConcepto();
             $this->item->precio += $this->precio;
-            //$this->precio += $this->item->getPrecio();
+            
             return $item;
         }
 
